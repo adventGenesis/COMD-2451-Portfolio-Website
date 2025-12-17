@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/my-styles.css">
+    </head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
+<head>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/my-styles.css">
+    <body>
+        <div>
+           <header>
+      <div class="container">
+            <a href="/" class="logo">
+                MEKHI BENNETT
+            </a>
+          <nav class="navbar">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="index.html" class="nav-link">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">GALLERY</a></li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">ABOUT ME</a></li>
+              <li class="nav-item">
+                <a href="resume.html" class="nav-link">RESUME</a>
+              </li>
+              <li class="nav-item">
+                  <a href="contact.html" class="nav-link">CONTACT</a>
+              </li>
+            </ul>
+            
+            </div>
+          </nav>
+      </div>
+    </header>
+
+  
+        <div class="header">
+            <h1> HEY! I'm Mekhi <br> I like to draw sometimes<br> and on occasion, collect transforming robot toys
+                </h1> 
+        </div>
+
+        <div class="w3-container">
+
+            <div class="w3-row-padding" style="margin:20px 50px">
+              <div class="w3-col l3">
+                <img src="assets/Lauren-ref-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(1)" class="artwork w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/Artfight-1-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(2)" class="artwork w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/DRHH72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(3)" class="artwork w3-hover-shadow">
+              </div>
+              <div class="w3-col l3">
+                <img src="assets/Artfight-3-72dpi.jpg" style="width:100%;cursor:pointer"
+                onclick="openModal();currentDiv(3)" class="artwork w3-hover-shadow">
+              </div>
+            </div>
+            
+            <div id="myModal" class="w3-modal w3-black">
+             <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+             <div class="w3-modal-content">
+            
+              <div class="w3-content" style="max-width:550px">
+                <img class="mySlides" src="assets/Lauren-ref-300dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/Artfight-1-300dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/DRHH300dpi.jpg" style="width:100%">
+                <img class="mySlides" src="assets/Artfight-3-300dpi.jpg" style="width:100%">
+                <div class="w3-row w3-black w3-center">
+                  <div class="w3-display-container w3-margin">
+                    <p id="caption"></p>
+                    <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
+                    <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
+                  </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/Lauren-ref-thumbnail.jpg" style="width:100%" onclick="currentDiv(1)" alt="OC Design">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/Artfight-1-Thumbnail.jpg" style="width:100%" onclick="currentDiv(2)" alt="Character fanart">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/DRHH-Thumbnail.jpg" style="width:100%" onclick="currentDiv(3)" alt="Deltarune AU fanart">
+                    </div>
+                    <div class="w3-col s3">
+                      <img class="demo w3-opacity w3-hover-opacity-off" src="assets/Artfight-3-Thumbnail.jpg" style="width:100%" onclick="currentDiv(4)" alt="Character fanart">
+                    </div>
+                </div> <!-- End row -->
+              </div> <!-- End w3-content -->
+              
+             </div> <!-- End modal content -->
+            </div> <!-- End modal -->
+            
+        </div>
+            
+            <script>
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+            
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function currentDiv(n) {
+              showDivs(slideIndex = n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+              }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " w3-opacity-off";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+            </script>
+
+            <div class="w3-center w3-margin">
+              <a href="gallery.html"><button class="button" alt="gallery button">Check Out The Rest</button></a>
+            </div>
+            
+     </footer>
+          <footer class="footer">
+            <p> Find me on social media.</p>
+            <a href="mailto:mekhivibennett14@gmail.com" target="_blank" class="fa fa-solid fa-envelope w3-hover-opacity w3-text-white"></a>
+            <a href="https://instagram.com" target="_blank" class="fa fa-instagram w3-hover-opacity w3-text-white"></a>
+            <a href="https://twitter.com" target="_blank" class="fa fa-twitter w3-hover-opacity w3-text-white"></a>
+            <p> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            <div class="footer-bottom">
+            <p>© MEKHI BENNETT 2025</p>
+        </div>
+        </footer>
+	</body>
+</html>
