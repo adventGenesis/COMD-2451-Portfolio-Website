@@ -14,8 +14,7 @@ ul {
 }
 .header {
   padding: 100px;
-  text-align: center;
-  background: #e91e63;
+  text-align: center;s
   opacity: 100%;
   color: white;
   z-index:5;
@@ -381,9 +380,6 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   border-color: rgb(233, 30, 99);
   color: #D73270;
   }
-#
-
-
 
 * {
   margin: 0;
